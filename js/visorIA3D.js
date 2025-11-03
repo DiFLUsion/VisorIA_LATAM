@@ -34,6 +34,56 @@ require([
   Graphic) => {
 
 
+/***********************************************
+ *              SIMBOLOGIA BROTES
+ ***********************************************/
+
+const colorsBrotes = [[255, 255, 0, 0.6], [255, 255, 255, 0.6], [255, 127, 127, 0.6]];
+
+function crearSimbolo(color) {
+  return {
+    type: "point-3d",
+    symbolLayers: [{
+      type: "icon",
+      resource: { primitive: "circle" },
+      material: { color },
+      size: 10
+    }]
+  };
+}
+
+const CaptiveSym = crearSimbolo(colorsBrotes[0]);
+const DomesticSym = crearSimbolo(colorsBrotes[1]);
+const WildSym = crearSimbolo(colorsBrotes[2]);
+
+
+
+const brotesRenderer = {
+  type: "unique-value",
+  legendOptions: {
+    title: "Especies"
+  },
+  field: "is_wild",
+
+  uniqueValueInfos: [
+    {
+      value: "Wild",
+      symbol: WildSym,
+      label: "Wild"
+    },
+    {
+      value: "Domestic",
+      symbol: DomesticSym,
+      label: "Domestic"
+    },
+    {
+      value: "Captive",
+      symbol: CaptiveSym,
+      label: "Captive"
+    }
+  ]
+};
+
 
 
   // Create iconSymbol and add to renderer
@@ -78,7 +128,10 @@ require([
         }
       ],
     },
-  });
+  },
+renderer: brotesRenderer,
+
+);
 
 
 function getInfoBrotes(feature) {
