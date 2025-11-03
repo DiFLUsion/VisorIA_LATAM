@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avian Influenza Scene 3D</title>
+
+     <link rel="icon"
+     type="image/png"
+     href="https://raw.githubusercontent.com/influenzaAviar/applicacionWeb3D/main/img/IconoAppAviar32.png">
+
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.19/esri/themes/dark/main.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+
+    <script src="https://js.arcgis.com/4.17/"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src = "js/visorIA3D.js"></script>
+    <link rel="stylesheet" href="css/aviarStyle.css">
+</head>
+
+
+<body>
+    <div class="flex-container">
+        <div id="viewDiv"></div>
+    </div>
+    <div id="timeSliderBrotes"></div>
+    <!-- <div id="timeSliderAlertas"></div> -->
+
+    <!-- <div id="infoDiv" class="esri-widget">
+        <div><b>Info brotes</b></div>
+        <br />
+        <div id="statsDiv" class="esri-widget"></div>
+    </div> -->
+
+    <!-- <div id="rutaDiv"><button type='buttonR' id="ruta" title="Rutas activadas por riesgo" class="icon-rutas"><img  class="icon-rutas-Logo" src="img/ruta.svg"/></button></div> -->
+    <!-- <div id="broteDiv"><button id="btnBrotes" title="Zoom to brotes" class="icon-brotes"> <img  class="icon-brotes-Logo" src="img/brote.svg"/></button></div> -->
+    <!-- <div id="alertasDiv"><button id="btnAlertas" title="Zoom to alertas" class="icon-alertas"><img  class="icon-brotes-Logo" src="img/alerta.svg"/></button></div> -->
+
+    <!-- De momento esconodo el botón de todas las rutas porque no está funcionando bien -->
+
+    <div id="rutaDivMigrations"><button type='buttonM' id="migrations" title="Movements" class="icon-migrations"><img  class="icon-rutas-Logo" src="img/migrations.svg"/></button></div>
+
+   <!--  <button id="myButtonAlerta" onclick="ShowHideTimeSliderAlertas()"><i class="esri-icon-non-visible"></i></button> -->
+    <button id="myButtonBrotes" onclick="ShowHideTimeSliderBrotes()"><i class="esri-icon-non-visible"></i></button>
+
+   <!--  <div id="info" class="esri-widget">
+        <div><b>Información</b></div>
+        <br />
+        <div><b> Se ha desarrollado la aplicación web como un Sistema de Alerta temprana automatizado para el enfoque de
+                la vigilancia de la influenza aviar
+                altamente patógena (IAAP) en España en base al riesgo.</b></div>
+        <br />
+        <div><b> Este sistema permitirá identificar alertas de introducción de la IAAP en España a través del
+                movimiento de aves silvestres procedentes de zonas de Europa con brotes activos. El sistema identificará
+                alertas semanalmente a través de la monitorización a tiempo real de la ocurrencia de la enfermedad en
+                Europa
+                identificando los movimientos de riesgo de aves silvestres a España y teniendo en cuenta otros factores
+                de
+                riesgo como supervivencia del virus y consecuencias en la población avícola ganadera.</b></div>
+        <br />
+        <span><img class="logoMinisterio"src="img/ministerio.png"/></span>
+        <span><img class="logoINIA" src="img/inia.jpg" /></span>
+    </div> -->
+
+
+</body>
+
+    </html>
